@@ -58,6 +58,11 @@ namespace FileExplorerLibrary
             throw new NotImplementedException();
         }
 
+        public void Refresh()
+        {
+            throw new NotImplementedException();
+        }
+
         public void RemoveChild(IExplorer explorer)
         {
             throw new NotImplementedException();

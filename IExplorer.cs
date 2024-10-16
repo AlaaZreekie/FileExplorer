@@ -16,5 +16,6 @@ namespace FileExplorerLibrary
         public void AddChild(IExplorer explorer);
         public void RemoveChild(IExplorer explorer);
         public IExplorer GetChild(string name);
+        public void Refresh();
     }
 }
