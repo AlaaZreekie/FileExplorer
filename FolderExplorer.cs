@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FileExplorerAbstraction.Bridge;
 
-namespace FileExplorerLibrary
+namespace FileExplorerLibraryIO
 {
     //TODO create fileBuilder later ...
     public class FolderExplorer : IExplorer
@@ -69,7 +70,9 @@ namespace FileExplorerLibrary
         {
             get
             {
-                _children = new List<IExplorer>();
+                GetChildren();
+                return _children.AsEnumerable();
+                /*_children = new List<IExplorer>();
                 foreach (DirectoryInfo item in _folder.GetDirectories())
                 {
                     _children.Add(new FolderExplorer(item));
@@ -80,11 +83,11 @@ namespace FileExplorerLibrary
                 {
                     _children.Add(new FileExplorer(item));
                     yield return new FileExplorer(item);
-                }
+                }*/
             }
         }
 
-        
+        public bool IsLeaf { get; set; }
 
         public void AddChild(IExplorer explorer)
         {
@@ -93,15 +96,24 @@ namespace FileExplorerLibrary
 
         public IExplorer GetChild(string name)
         {
-            GetChildren();              
+            GetChildren();
 
-            foreach (IExplorer item in Children)
+            return _children.Where(c => c.Name == name).FirstOrDefault()!;
+
+            /*
+             * return (from c in _children
+                    where c.Name == name
+                    orderby c.Name
+                    descending                    
+                    select c *//*new B(c.id, c.name)*//*).FirstOrDefault();
+             */
+            /*foreach (IExplorer item in _children)
             {
                 if(item.Name == name)
                     return item;
             }
 
-            return null!;
+            return null!;*/
         }
 
         public void RemoveChild(IExplorer explorer)

@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FileExplorerAbstraction.Bridge;
 
-namespace FileExplorerLibrary
+namespace FileExplorerLibraryIO
 {
     public class FileExplorer : IExplorer
     {
@@ -47,6 +48,8 @@ namespace FileExplorerLibrary
         }
 
         public IEnumerable<IExplorer> Children => throw new NotImplementedException();
+
+        public bool IsLeaf => throw new NotImplementedException();
 
         public void AddChild(IExplorer explorer)
         {
