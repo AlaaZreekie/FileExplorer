@@ -97,6 +97,7 @@ namespace FileExplorerLibraryIO
         public IExplorer GetChild(string name)
         {
             GetChildren();
+
             return _children.Where(c => c.Name == name).FirstOrDefault()!;
 
             /*
