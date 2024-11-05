@@ -61,6 +61,11 @@ namespace FileExplorerLibraryIO
             throw new NotImplementedException();
         }
 
+        public void GetChildren()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Refresh()
         {
             throw new NotImplementedException();

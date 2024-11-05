@@ -126,7 +126,7 @@ namespace FileExplorerLibraryIO
             Invalidate();
         }
 
-        private void GetChildren()
+        public void GetChildren()
         {
             try
             {
