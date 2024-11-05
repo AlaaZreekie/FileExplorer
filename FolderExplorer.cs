@@ -128,21 +128,32 @@ namespace FileExplorerLibraryIO
 
         private void GetChildren()
         {
-            if (_children is not null)
-               { return; }
-            
-            
-            _children = new List<IExplorer>();
-            foreach (DirectoryInfo item in _folder.GetDirectories())
+            try
             {
-                _children.Add(new FolderExplorer(item));
-              
-            }
+                if (_children is not null)
+                { return; }
 
-            foreach (FileInfo item in _folder.GetFiles())
-            {
-                _children.Add(new FileExplorer(item));
+                _children = new List<IExplorer>();
+                foreach (DirectoryInfo item in _folder.GetDirectories())
+                {
+                    try
+                    {
+                        _children.Add(new FolderExplorer(item));
+                    }
+                    catch { }
+                }
+
+                foreach (FileInfo item in _folder.GetFiles())
+                {
+                    try
+                    {
+                        _children.Add(new FileExplorer(item));
+                    }
+                    catch { }
+                }
             }
+            catch(Exception ex) { }
+            
             
         }
     }
