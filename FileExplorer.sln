@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileExplorerLibraryIO", "Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileExplorerAbstraction", "..\FileExplorerAbstraction\FileExplorerAbstraction.csproj", "{B1A8B65F-BB13-4BF1-92F4-4D6A6E702A22}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileExplorerDesktop", "..\FileExplorerDesctop\FileExplorerDesktop.csproj", "{1D69FF5F-306B-45B3-B8DE-DD49AC5817E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplorerControls", "..\ExplorerControls\ExplorerControls.csproj", "{BE8C0E52-B3B7-4646-872B-ADAF46EF3944}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B1A8B65F-BB13-4BF1-92F4-4D6A6E702A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1A8B65F-BB13-4BF1-92F4-4D6A6E702A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1A8B65F-BB13-4BF1-92F4-4D6A6E702A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D69FF5F-306B-45B3-B8DE-DD49AC5817E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D69FF5F-306B-45B3-B8DE-DD49AC5817E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D69FF5F-306B-45B3-B8DE-DD49AC5817E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D69FF5F-306B-45B3-B8DE-DD49AC5817E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8C0E52-B3B7-4646-872B-ADAF46EF3944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8C0E52-B3B7-4646-872B-ADAF46EF3944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8C0E52-B3B7-4646-872B-ADAF46EF3944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8C0E52-B3B7-4646-872B-ADAF46EF3944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
