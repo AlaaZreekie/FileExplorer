@@ -8,7 +8,7 @@ using FileExplorerAbstraction.Bridge;
 
 namespace FileExplorerLibraryIO
 {
-    //TODO create fileBuilder later ...
+    
     public class FolderExplorer : IExplorer
     {
         private DirectoryInfo _folder;
